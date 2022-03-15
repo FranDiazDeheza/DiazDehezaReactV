@@ -10,7 +10,7 @@ function App() {
   
   
   return (
-    <>
+    
     <CartContextProvider>
   <Router>
  
@@ -26,7 +26,7 @@ function App() {
  </Router>  
 
  </CartContextProvider>
- </>
+ 
   );
 }
 

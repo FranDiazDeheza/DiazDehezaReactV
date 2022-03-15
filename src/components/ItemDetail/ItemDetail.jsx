@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import {useContext} from 'react'
 import CartContext from '../context/CartContext'; 
@@ -6,10 +6,19 @@ import CartContext from '../context/CartContext';
 
 
 function ItemDetail({image,stock, book_name, writer_name,gender,price}) {
-  const {addItem,clearCart} = useContext (CartContext);
 
+ 
+
+  const {addItem,clearCart} = useContext (CartContext);
+  const ItemAAgregar = {image,stock, book_name, writer_name,gender,price}
+
+  
+  const [existinCart,setexistinCart] = useState(false)
+  
+  
   function addToCart(qty){
-    addItem (image,stock, book_name, writer_name,gender,price, qty)
+    addItem (ItemAAgregar, qty)
+    setexistinCart(true)
   }
   return (
     <div class="bg-white">
@@ -32,8 +41,11 @@ function ItemDetail({image,stock, book_name, writer_name,gender,price}) {
           <p class="text-sm font-medium text-gray-900">${price}</p>
        
         </div>
-        <ItemCount addItem={addItem} stock={stock} />
-        <button onClick={clearCart}  type="button" className="mt-4 btn btn-info cart-button px-5"> Vaciar el Carrito Carrito </button> 
+        {  existinCart ?
+         <button onClick={clearCart}  type="button" className="mt-4 btn btn-info cart-button px-5"> Terminar Compra </button> 
+         :
+        <ItemCount addToCart={addToCart} stock={stock}></ItemCount> 
+      }
         
       
 

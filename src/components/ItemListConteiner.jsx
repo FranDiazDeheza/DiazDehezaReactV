@@ -84,7 +84,59 @@ const Database = [{
   "gender": "Novela",
   "price" : 3450,
   "id" : 10
-}]
+},
+{
+  "image": "https://imagessl1.casadellibro.com/a/l/t5/21/9788498381221.jpg",
+  "stock": 31,
+  "book_name": "Mil Soles Esplendidos",
+  "writer_name": "Khaled Hosseini",
+  "gender": "Drama",
+  "price" : 675,
+  "id" : 11
+},
+{
+  "image": "https://www.elejandria.com/covers/El_perro_del_hortelano-Lope_de_Vega-lg.png",
+  "stock": 17,
+  "book_name": "El Perro del Hortelano",
+  "writer_name": "Lope de Vega",
+  "gender": "Drama",
+  "price" : 4500,
+  "id" : 12
+},
+{
+  "image": "https://contentv2.tap-commerce.com/cover/large/9789877182361_1.jpg?id_com=1162",
+  "stock": 7,
+  "book_name": "Cuentos Policiales",
+  "writer_name": "Edgar Allan Poe",
+  "gender": "Policial",
+  "price" : 1700,
+  "id" : 13
+},
+{
+  "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1314735183l/12477077.jpg",
+  "stock": 16,
+  "book_name": "El misterio de Salem's Lot",
+  "writer_name": "Stephen King",
+  "gender": "Terror",
+  "price" : 4990,
+  "id" : 14
+},
+{
+  "image": "https://http2.mlstatic.com/D_NQ_NP_770895-MLA41517676262_042020-O.jpg",
+  "stock": 23,
+  "book_name": "Dracula",
+  "writer_name": "Bram Stoker",
+  "gender": "Terror",
+  "price" : 4990,
+  "id" : 15
+},
+ 
+
+
+
+
+
+]
 
 
 
