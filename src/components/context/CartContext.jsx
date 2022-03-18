@@ -28,8 +28,11 @@ function addItem(ItemAAgregar,qty) {
 function isItemInCart(id) {
     return itemsCart.some(cadait => cadait.id === id)
        
-    
+}
 
+function getItemInCart(id) {
+    return itemsCart.find(cadait => cadait.id === id)
+       
 }
 
 
@@ -39,7 +42,7 @@ function clearCart(){
 
 
 return (
-    <CartContext.Provider value={ {addItem,itemsCart,clearCart} }>
+    <CartContext.Provider value={ {addItem,itemsCart,getItemInCart,clearCart} }>
      {children} 
     </CartContext.Provider>
 

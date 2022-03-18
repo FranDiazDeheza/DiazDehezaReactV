@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function Item({id,image, stock, book_name, writer_name,gender,price}) {
   return (
     <div className="bg-white">
-  <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+  <div className="max-w-2xl mx-auto py-10 px-2 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-8">
     
     <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <img src={image} alt=""></img>
