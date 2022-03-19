@@ -28,7 +28,8 @@ return (
      <div className="container">
      <div className="text-center d-flex flex-column">
      <button onClick={() => addToCart(count)}  type="button" className="mt-4 btn btn-success cart-button px-5"> Agregar al Carrito </button>    
-    <small className="text-muted mt-2">Stock Disponible {stock} </small>   
+    <small className="text-muted mt-2">Stock Disponible {stock} </small> 
+      
     
     
     </div>

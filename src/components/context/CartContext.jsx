@@ -40,9 +40,22 @@ function clearCart(){
     setItemsCart([])
 }
 
+function countItemsinCart(){
+    let totalItems = 0
+   itemsCart.forEach(ItemAAgregar => totalItems += ItemAAgregar.qty)
+   return totalItems;
+}
+
+
+function getTotalPrice() {  
+    let totalPrice = 0
+    itemsCart.forEach(ItemAAgregar => totalPrice += ItemAAgregar.qty * ItemAAgregar.price)
+    return totalPrice;
+ }
+
 
 return (
-    <CartContext.Provider value={ {addItem,itemsCart,getItemInCart,clearCart} }>
+    <CartContext.Provider value={ {addItem,getTotalPrice,countItemsinCart,itemsCart,getItemInCart,clearCart} }>
      {children} 
     </CartContext.Provider>
 

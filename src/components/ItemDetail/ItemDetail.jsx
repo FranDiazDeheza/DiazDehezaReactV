@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import {useContext} from 'react'
 import CartContext from '../context/CartContext'; 
+import {Link} from "react-router-dom"
 
 
 
@@ -9,7 +10,7 @@ function ItemDetail({id,image,stock, book_name, writer_name,gender,price}) {
 
  
 
-  const {addItem,clearCart,getItemInCart} = useContext (CartContext);
+  const {addItem,getItemInCart} = useContext (CartContext);
   const ItemAAgregar = {id,image,stock, book_name, writer_name,gender,price}
 
   let stockNuevo = ItemAAgregar.stock  ;
@@ -58,7 +59,7 @@ if (itemInCart) {
        
         </div>
         {  existinCart ?
-         <button onClick={clearCart}  type="button" className="mt-4 btn btn-info cart-button px-5"> Terminar Compra </button> 
+         <Link to="/carrito"  type="button" className="mt-4 btn btn-info cart-button px-5"> Terminar Compra </Link> 
          :
         <ItemCount addToCart={addToCart} stock={stockNuevo}></ItemCount> 
       }
